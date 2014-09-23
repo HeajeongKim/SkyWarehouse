@@ -2,14 +2,14 @@
 $(document).ready(function() {
 
 	// for webcam support
-	$('#example').photobooth().on("image", function(event, dataUrl) {
-		console.log('hi');
+	$('#example').photobooth().on('image', function(event, dataUrl) {
+		// console.log('hi');
 		$("#hiddenImg").append('<img src="' + dataUrl + '">');
 		qrCodeDecoder(dataUrl);
 
-		//console.log(event);
-		//console.log(dataUrl);
-		//console.log($('#example').data( "photobooth" ));
+		// //console.log(event);
+		// //console.log(dataUrl);
+		// //console.log($('#example').data( "photobooth" ));
 	});
 
 	$('#button').click(function() {
