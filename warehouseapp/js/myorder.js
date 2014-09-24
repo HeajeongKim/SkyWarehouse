@@ -4,3 +4,5 @@ $.get("http://skystore.herokuapp.com/employeeDashboard/mobile/myAssignedOrders",
 
 	$('#myorder-list').append(template({orders: data}));
 });
+
+

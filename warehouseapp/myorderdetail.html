@@ -26,8 +26,36 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<title>Welcome to SkyWarehouse</title>
+
+		<script type="text/javascript">
+			function getScan(){
+
+			    var href=window.location.href;
+			    var ptr=href.lastIndexOf("#");
+			    if(ptr>0){
+			        href=href.substr(0,ptr);
+			    }
+			    window.open("http://skystore.herokuapp.com/qrcode");
+			}
+			var changingHash=false;
+
+			function getHash(){
+
+			    if(!changingHash){
+			        changingHash=true;
+			        var hash=window.location.hash.substr(1);
+			        document.getElementById('barcode').value=unescape(hash);
+			        window.location.hash="";   
+			        changingHash=false;
+			    }else{
+			        //Do something with barcode here
+			        
+			    }
+			}
+		</script>
+
 	</head>
-	<body>
+	<body onhashchange="getHash()">
 	
 	<nav class="navbar navbar-default" role="navigation">
 		<div class="container-fluid">
@@ -39,7 +67,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Skystore Warehouse</a>
+				<a class="navbar-brand" href="index.html">Skystore Warehouse</a>
 			</div>
 		
 		
@@ -67,7 +95,8 @@
   		<div class="list-group">
   			{{#obj.orderDetails}}
   				<a href="#" class="list-group-item active">{{item.category}}</a>
-  				<a href="zxing://scan/?ret=./itemcheck.html/{CODE}/description&SCAN_FORMATS=UPC_A,EAN_13" class="list-group-item">Item name : {{item.itemName}} (Item Id : {{ItemId}}) <span class="badge">{{quantity}}</span></a>
+  				<a href="#" class="list-group-item">Item name : {{item.itemName}} (Item Id : {{ItemId}}) <span class="badge">{{quantity}}</span>
+  					<button type="button" class="btn btn-primary" onclick="getScan();">Web Scan</button></a>
   			{{/obj.orderDetails}}
   		</div>
 	</script>
@@ -75,10 +104,11 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
-		<script type="text/javascript" src="js/init.js"></script>
 		<script type="text/javascript" src="js/detail.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/myorder.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+		
 	</body>
 </html>
