@@ -58,17 +58,18 @@
 
 	<script id="detail-template" type="text/x-handlebars-template">
 		<!-- Default panel contents -->
-  		<div class="panel-heading">{{ordername}}</div>
+  		<div class="panel-heading">{{status}}</div>
 	  		<div class="panel-body">
 	    		<a class="btn btn-info" role="button" onclick="chooseOrder();">Choose me!</a>
 	  		</div>
 
   		<!-- List group -->
-  		<ul class="list-group">
-  			
-    		<li class="list-group-item">Cras justo odio</li>
-  			
-  		</ul>
+  		<div class="list-group">
+  			{{#obj.orderDetails}}
+  				<a href="#" class="list-group-item active">{{item.category}}</a>
+  				<a href="#" class="list-group-item">Item name : {{item.itemName}} (Item Id : {{ItemId}}) <span class="badge">{{quantity}}</span></a>
+  			{{/obj.orderDetails}}
+  		</div>
 	</script>
 
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>

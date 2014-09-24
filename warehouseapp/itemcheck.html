@@ -48,36 +48,18 @@
 				<ul class="nav navbar-nav">
 					<li><a href="index.html">New Order</a></li>
 					<li><a href="myorder.html">My Order</a></li>
-					<li><a href="zxing://scan/?ret=itemcheck.html/{CODE}/description&SCAN_FORMATS=UPC_A,EAN_13" target="_blank">qrcode</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-
-	<div class="page-header">
-	  	<h1>New orders </h1> 
-	  	<p>
-	  	<small>click the order to see details</small> 	
-	</div>
 	
-	<div class="list-group new-order" id="order-list">
-
-	</div>
-	
-	<script id="order-template" type="text/x-handlebars-template">
-		{{#orders}}
-			<a href="detail.html?status={{status}}&id={{id}}" class="list-group-item">
-				<h4 class="list-group-item-heading ellipsis">Order</h4>
-				<p class="list-group-item-text">{{status}}</p>
-				<p class="list-group-item-text">Created: {{createdAt}}</p>
-			</a>
-		{{/orders}}
-	</script>
+	<h1> Hello </h1>
 
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
 		<script type="text/javascript" src="js/init.js"></script>
+		<script type="text/javascript" src="js/detail.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>

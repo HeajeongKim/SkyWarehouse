@@ -26,9 +26,10 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/qrcode/styles.css" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/qrcode/reset.css" />
 		<link href='css/font-awesome-4.1.0/css/font-awesome.min.css' rel='stylesheet' type='text/css' />
 		<title>Welcome to SkyWarehouse</title>
-
 
 	</head>
 	<body>
@@ -50,7 +51,7 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
-						<li><a href="index.html">New Order</a></li>
+						<li><a href="index.html" onClick="window.location.reload(true)">New Order</a></li>
 						<li><a href="myorder.html">My Order</a></li>
 					</ul>
 				</div>
@@ -63,51 +64,38 @@
 
 		<i class="fa fa-qrcode fa-3x"></i> Scan QR Code
 
-		
-		<div class="pageWrapper">
-
-			<div class="boxWrapper">
-				<div id="example" style="width:200px; height:200px;"></div>
-			</div>
-
-			<div class="button">
-				<a id="button">Scan QR code</a>
-			</div>
-
-			<div class="boxWrapper auto">
-				<div id="hiddenImg"></div>
-				<div id="qrContent"><p>Result will be here.</p></div>
-			</div>
-
+		<div id="qrcode">
+			<iframe src="http://skystore.herokuapp.com/qrcode"></iframe>
 		</div>
 
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/photobooth.js"></script>
-	
-		<script type="text/javascript" src="jsqrcode/src/grid.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/version.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/detector.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/formatinf.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/errorlevel.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/bitmat.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/datablock.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/bmparser.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/datamask.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/rsdecoder.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/gf256poly.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/gf256.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/decoder.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/qrcode.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/findpat.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/alignpat.js"></script>
-		<script type="text/javascript" src="jsqrcode/src/databr.js"></script>
+		<script type="text/javascript" src="js/qrcode/photobooth.js"></script>
+
+		<script type="text/javascript" src="js/qrcode/qr/grid.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/version.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/detector.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/formatinf.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/errorlevel.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/bitmat.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/datablock.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/bmparser.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/datamask.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/rsdecoder.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/gf256poly.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/gf256.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/decoder.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/qrcode.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/findpat.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/alignpat.js"></script>
+		<script type="text/javascript" src="js/qrcode/qr/databr.js"></script>
 		
 		
 		<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/qrcode.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
-		<script type="text/javascript" src="js/effects.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/qrcode/effects.js"></script>
 	</body>
 </html>

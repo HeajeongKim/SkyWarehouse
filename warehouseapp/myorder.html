@@ -62,10 +62,10 @@
 	<div class="list-group new-order" id="myorder-list">
 
 	</div>
-	
+
 	<script id="myorder-template" type="text/x-handlebars-template">
 		{{#orders}}
-			<a href="detail.html?ordername={{ordername}}" class="list-group-item">
+			<a href="myorderdetail.html?status={{status}}&id={{id}}" class="list-group-item">
 				<h4 class="list-group-item-heading ellipsis">Order</h4>
 				<p class="list-group-item-text">{{status}}</p>
 				<p class="list-group-item-text">Created: {{createdAt}}</p>
@@ -77,7 +77,7 @@
 		<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/handlebars-v2.0.0.js"></script>
-		<script type="text/javascript" src="js/init.js"></script>
+		<script type="text/javascript" src="js/myorder.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
